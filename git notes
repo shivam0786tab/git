@@ -1,0 +1,66 @@
+install git -> yum install git
+
+configure git with username and email
+
+git config --global user.name "Shivam Sachdeva"
+git config --global user.email "sachdeva.shivam0786@gmail.com"
+
+to view :
+
+git config --list
+
+git init
+
+git status
+
+git add .
+
+git status
+
+git commit -m "Messag"
+
+git log -> to see commits
+
+git show <commit_id>:index.html -> index.html is the file we want to view like what chnages were as a part of this commit
+
+V.imp
+
+if in realtime want to change the local files to some prev commit
+
+git checkout <commit> -- * or git checkout <commit> -- index.html
+
+to come back
+
+git checkout main -- *
+
+V. imp -> suppose we made changes in some imp files (they were incorrect by misktake , not yet staged) - to restore back to the prev working version -> git restore <file> or git restore .
+
+Now suppsoe we added somw incorrect changes and we did git add that file , now 
+
+to revert back it from staged to unstaged -> git restore --staged <file>
+then , to make it back to prev version -> git restore <file>
+
+Now , suppose if we added some good changes in our stagig area , it will definitely show in the staging area , now after suppose we did some changes in the same file
+and do git status -> it will show the same file in modifies and to be added 
+
+so 
+
+git restore --worktree index.html
+
+suppose s, we commited the wrong changes and we want to revert back then 
+
+git reset --hard HARD^ -> it will move back to the prev commit
+
+now , to see last some commits with file diffs 
+
+git log -p -2
+
+git log --stat -> to see comit wise what all files changd
+
+git log --pretty=oneline
+
+to see in which commit was something was added
+
+git log -S "h1" index.html
+
+git remote -v

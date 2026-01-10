@@ -64,3 +64,22 @@ to see in which commit was something was added
 git log -S "h1" index.html
 
 git remote -v
+
+git status -sb
+
+==============================================================================================================================
+
+git tags:
+
+to create a tag:
+git tag -a <tag_name> -m <description of tag>
+
+to view all tags:
+git tag -> it will show all the tags 
+
+suppose we didnot had a tag then it will associate this tag with the latest commit.
+git show <tag_name>
+
+git tag -a V6 <commit_id> -> it will assocaite the commit with the tag
+
+to push tags to rmeote : git push origin --tags

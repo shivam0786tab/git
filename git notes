@@ -49,7 +49,7 @@ git restore --worktree index.html
 
 suppose s, we commited the wrong changes and we want to revert back then 
 
-git reset --hard HARD^ -> it will move back to the prev commit
+git reset --hard HEAD^ -> it will move back to the prev commit
 
 now , to see last some commits with file diffs 
 
